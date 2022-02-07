@@ -1,0 +1,371 @@
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+
+  /* ### Neutral */
+
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  /* Fons */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--dark-violet);
+  font-family: 'Karla', sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'DM Serif Display', serif;
+}
+h1,
+h2 {
+  font-size: 4em;
+  letter-spacing: 2px;
+  line-height: 1;
+  position: relative;
+  margin: 0;
+  padding-top: 50px;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+p {
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.line-top::before {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  top: 0px;
+  left: 0;
+}
+
+.line-violet::before {
+  background-color: var(--dark-violet);
+}
+
+.btn {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: transparent;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.btn-reverse {
+  color: var(--dark-violet);
+  border-color: var(--dark-violet);
+}
+
+.container {
+  padding: 0 20px;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex > div {
+  flex: 1;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+/* Nav styling */
+nav {
+  padding: 13px 0;
+}
+
+nav .hamburger {
+  display: none;
+}
+
+nav .hamburger:focus {
+  outline: none;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+nav li {
+  margin-left: 30px;
+}
+nav li a {
+  color: var(--dark-grayish-violet);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+#menu li a:hover {
+  color: var(--very-dark-violet);
+}
+#menu .btn:hover {
+  background-color: var(--very-dark-violet);
+  color: #fff;
+}
+
+/* Header styling */
+header {
+  background-color: var(--dark-violet);
+  color: white;
+  padding: 50px 0;
+  position: relative;
+  margin-bottom: 250px;
+}
+header * {
+  z-index: 1;
+}
+header::after {
+  content: '';
+  background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+  z-index: 2;
+}
+header::before {
+  content: '';
+  background-image: url(./images/bg-pattern-intro-left-desktop.svg);
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  z-index: 0;
+}
+
+.ivan {
+  max-width: 100%;
+  margin-bottom: -250px;
+}
+
+/* Section styling */
+.bg-violet {
+  background-color: var(--dark-violet);
+  padding: 70px;
+  margin: 100px auto;
+  background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+}
+
+.bg-violet h2 {
+  color: #fff;
+  font-size: 3em;
+  padding: 0;
+  width: 60%;
+}
+
+.title {
+  margin-top: 80px;
+}
+
+button.btn:hover {
+  background-color: #fff;
+  color: var(--dark-violet);
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--very-light-gray);
+  padding: 60px 0 30px;
+  background-image: url(./images/bg-pattern-footer-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+footer h4 {
+  color: var(--dark-grayish-violet);
+  text-transform: uppercase;
+}
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+footer ul.flex li:not(first-child) {
+  margin-left: 15px;
+}
+footer li {
+  margin-bottom: 10px;
+}
+footer li a {
+  color: var(--dark-violet);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+footer img:hover {
+  color: black !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--grayish-blue);
+  margin-bottom: 30px;
+}
+.align-start ul li a:hover {
+  text-decoration: underline;
+}
+.attribution {
+  font-size: 12px;
+  margin-top: 30px;
+  bottom: 0;
+}
+.attribution a {
+  text-decoration: none;
+}
+#menu img {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  #menu div {
+    width: 100%;
+    height: 100vh;
+    margin-top: -60px;
+  }
+  #menu img {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-position: bottom;
+    background-size: cover;
+  }
+  nav {
+    position: fixed;
+    background-color: #fff;
+    padding: 20px 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+  }
+  nav .hamburger {
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+  nav .hamburger .close {
+    display: none;
+  }
+  nav .hamburger.show .open {
+    display: none;
+  }
+  nav .hamburger.show .close {
+    display: block;
+  }
+  nav .flex {
+    flex-direction: row;
+  }
+  nav .img-wrapper {
+    text-align: left;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul.show {
+    background-color: var(--very-dark-violet);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding-top: 30px;
+    margin: 0;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    z-index: 100;
+  }
+  nav ul li {
+    margin: 20px 0;
+  }
+  nav ul a {
+    color: #fff;
+    font-size: 20px;
+  }
+  .btn-reverse {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 15px 80px;
+  }
+  header {
+    padding-top: 0;
+    margin-bottom: 50px;
+  }
+  header::after,
+  header::before {
+    display: none;
+  }
+  .ivan {
+    display: inline-block;
+    margin-left: -20px;
+    margin-bottom: -10px;
+    max-width: calc(100% + 40px);
+  }
+  .line-top::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .reverse-mobile {
+    flex-direction: column-reverse;
+  }
+  .bg-violet {
+    background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+  }
+  .bg-violet h2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  footer {
+    background-size: contain;
+    background-image: url(./images/bg-pattern-footer-mobile.svg);
+  }
+  footer ul.flex {
+    flex-direction: row;
+  }
+  footer .flex div {
+    width: 100%;
+  }
+}
